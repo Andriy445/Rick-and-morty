@@ -1,0 +1,22 @@
+
+.card-wrapper{
+    background-color: white;
+}
+
+.name{
+    text-align: center;
+}
+.photo{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    width: 25rem;
+    border-radius: 1rem;
+}
+
+.info{
+    padding: 1rem;
+}
