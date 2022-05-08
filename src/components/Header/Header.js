@@ -1,11 +1,13 @@
-
-import * as React from 'react';
-import './Header.css'
+import * as React from "react";
+import "./Header.css";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
-    return (
-       <header>
-           <span>Rick and Morty app</span>
-       </header>
-    );
+  return (
+    <header>
+      <Link to={`/`}>
+        <span>Rick and Morty app</span>
+      </Link>
+    </header>
+  );
 };

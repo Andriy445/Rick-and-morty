@@ -17,25 +17,24 @@ export const CharacterProfile = () => {
           const result = res.data;
           setCharacterInfo(result);
           setIsLoaded(true);
-          console.log(res)
         });
     } catch (err) {
       console.log(err);
     }
   }, [id]);
 
-  const { name, species, gender, location, episode, status, created, image } = CharacterInfo;
- 
+  const { name, species, gender, location, episode, status, created, image } =
+    CharacterInfo;
+
   const formatDate = (time) => {
-    const options = { year: "numeric", month: "2-digit", day: "2-digit" }
-    return new Date(time).toLocaleString(undefined, options)
-  }
-  
+    const options = { year: "numeric", month: "2-digit", day: "2-digit" };
+    return new Date(time).toLocaleString(undefined, options);
+  };
+
   return (
-    <div className="card-wrapper">
+    <div className="profile-wrapper">
       {isLoaded ? (
         <>
-          
           <div className="photo">
             <img src={image} alt="Character photo" />
           </div>
@@ -44,10 +43,10 @@ export const CharacterProfile = () => {
             <h4>Gender: {gender}</h4>
             <h4>Species: {species}</h4>
             <h4>Location: {location.name}</h4>
-            <h4>Epsiodes: {}</h4>
+            <h4>Epsiodes: {episode.length}</h4>
             <h4>Status: {status}</h4>
-            <h4>Created: {formatDate(created)}</h4> 
-            </div>
+            <h4>Created: {formatDate(created)}</h4>
+          </div>
         </>
       ) : (
         <h2>Loading....</h2>

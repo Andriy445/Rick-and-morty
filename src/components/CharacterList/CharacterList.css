@@ -1,11 +1,14 @@
- .list-item:hover{
-    cursor: pointer;
-    background: #EEEEEE;
+.search-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
 }
 
-.list-item a{
-    width: 100%;  
+.loader-button-wrapper{
     display: flex;
     justify-content: center;
-    align-items: center;
+   margin-top: 2rem;
 }
+
+ 
